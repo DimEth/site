@@ -1,0 +1,70 @@
+@keyframes barAnim {
+    from { transform: rotateY(0);}
+    to {transform: rotateY(-5deg);}
+}
+
+@keyframes holeAnim {
+    from{width: 0px;}
+    to{width: 5px;}
+}
+
+@keyframes hidenAnim {
+    from{left: 400px;}
+    to{left: 600px;}
+}
+
+#bar {
+    margin-top: 50px;
+    width: 1200px;
+    height: 200px;
+    border: 1px solid white;
+    border-radius: 10px;
+    background: rgba(224,143,205,1);
+    transform-origin: center;
+    transform: rotateY(0);
+    animation: barAnim  1s  forwards;
+}
+
+#shield {
+    height: 100px;
+    width: 200px;
+    border: 0px solid black;
+    position: absolute;
+    left: 400px;
+    top: 50px;
+    background: rgba(224,143,205,1);
+    z-index: 2;
+    
+}
+
+#hole {
+    height: 120px;
+    width: 0px;
+    background: #fff;
+    position: absolute;
+    left: 600px;
+    top: 40px;
+    z-index: 1;
+    animation: holeAnim 0.5s 1s forwards;
+}
+
+#hiden {
+    height: 100px;
+    width: 200px;
+    position: absolute;
+    left: 400px;
+    top: 50px;
+    font-size: 20px;
+    text-align: center;
+    line-height: 100px;
+    background: #E8E0B0;
+    border-radius: 0 10px 10px 0;
+    z-index: 0;
+    animation: hidenAnim 1s 2.5s  forwards;
+}
+
+
+body {
+    perspective-origin: center;
+    perspective: 200px;
+}
